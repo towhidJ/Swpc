@@ -1,6 +1,6 @@
 package com.towhidcse.swpc.data.model
 
 data class LoginResponse(
-    val jwt: String,
-    val username: String
+    val accessToken: String,
+    val role: String
 )

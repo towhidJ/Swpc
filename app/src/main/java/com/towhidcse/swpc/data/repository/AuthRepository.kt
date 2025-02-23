@@ -19,7 +19,7 @@ class AuthRepository(private val apiService: AuthApiService) {
                 } ?: emit(Result.failure(Exception("Login failed: Empty response body")))
             } else {
                 val errorMessage = response.errorBody()?.string() ?: response.message()
-                emit(Result.failure(Exception("Login failed: $errorMessage")))
+                emit(Result.failure(Exception("Login failed: ${errorMessage}")))
             }
         } catch (e: IOException) {
             emit(Result.failure(Exception("Network error: ${e.message}")))

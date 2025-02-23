@@ -7,6 +7,7 @@ import androidx.navigation.compose.rememberNavController
 import com.towhidcse.swpc.ui.view.ForgotPasswordScreen
 import com.towhidcse.swpc.ui.view.LoginScreen
 import com.towhidcse.swpc.ui.view.PostScreen
+import com.towhidcse.swpc.ui.view.SignUpScreen
 
 @Composable
 fun MainNavigation() {
@@ -19,10 +20,11 @@ fun MainNavigation() {
             ForgotPasswordScreen()
         }
         composable(route = Routes.MainRoute.SignUp.route) {
-            PostScreen()
+            SignUpScreen(navController)
         }
         composable(route = Routes.MainRoute.Home.route) {
             PostScreen()
         }
+
     }
 }
